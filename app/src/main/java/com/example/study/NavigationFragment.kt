@@ -42,9 +42,8 @@ class NavigationFragment : Fragment() {
         }
 
         binding.btnBackStack.setOnClickListener {
-            // временно открываем CallbackFragment, позже заменим на FragmentA
             parentFragmentManager.beginTransaction()
-                .replace(R.id.container, CallbackFragment())
+                .replace(R.id.container, FragmentA())
                 .addToBackStack(null)
                 .commit()
         }
